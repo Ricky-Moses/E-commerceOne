@@ -240,6 +240,35 @@ header .cart{
 /* Head */
 
 
+/* Navigation bar */
+
+#navBar nav ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 20px;
+}
+
+#navBar nav ul li a{
+    color: var(--text-color-G);
+    cursor: var(--cursor);
+}
+
+#navBar nav ul li select{
+    padding: 5px 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+#navBar nav ul li select option{
+    background: var(--text-color-W);
+    color: var(--text-color-G);
+    font-weight: 600;
+}
+
+/* Navigation bar */
+
 
 
 

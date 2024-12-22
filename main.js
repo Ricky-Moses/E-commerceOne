@@ -18,15 +18,15 @@ function bgNoneBox(){
 
 // Responsive Mobile
 
-let headInputDrop = document.getElementById("inputDrop");
+// let headInputDrop = document.getElementById("inputDrop");
 
-function toggleInput(){
-    headInputDrop.style.display = window.innerWidth < 992 ? "none" : "flex";
-}
+// function toggleInput(){
+//     headInputDrop.style.display = window.innerWidth < 992 ? "none" : "flex";
+// }
 
-toggleInput();
+// toggleInput();
 
-window.addEventListener("resize", toggleInput) // resize event listener for inputDrop on mobile view and below 992px.
+// window.addEventListener("resize", toggleInput) // resize event listener for inputDrop on mobile view and below 992px.
 
 // InputDrop
 
