@@ -149,10 +149,13 @@
     <!-- Navigation bar -->
 
     <section id="navBar">
-        <nav>
+        <div class="toggleIcon" id="toggleIcon" onclick="navToggle()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav id="navList">
             <ul>
                 <li>
-                    <select name="" id="">
+                    <select name="" id="selectInputList">
                         <a href=""><option value="">Shop by Department</option></a>
                         <a href=""><option value="">Groceries</option></a>
                         <a href=""><option value="">Drinks</option></a>
@@ -164,7 +167,7 @@
                 <li><a href="">Kids</a></li>
                 <li><a href="">Accessories</a></li>
                 <li>
-                    <select name="" id="">
+                    <select name="" id="selectInputList">
                         <option value="">Pages</option>
                         <a href=""><option value="">About Us</option></a>
                         <a href=""><option value="">Shop</option></a>
@@ -183,8 +186,18 @@
                 <li><a href="">Blog</a></li>
             </ul>
         </nav>
-    </section>
+    </section> 
     <!-- Navigation bar -->
+
+    <!-- Advertisement -->
+
+    <main id="adverTise">
+        <div class="main-box"></div>
+        <div class="side-box"></div>
+        <div class="side-box"></div>
+    </main>
+
+    <!-- Advertisement -->
 </body>
 <script src="main.js"></script>
 </html>

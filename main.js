@@ -36,8 +36,20 @@ function bgNoneBox(){
 function cartActive(){
 
     // Mobile view cart below 576px:
-    if(window.innerWidth < 576){
+    if(window.innerWidth <= 576){
+        document.getElementById("cartList").style.width = "70%";
+        document.getElementById("cartList").style.display = "flex";
+        document.body.style.backgroundColor = "rgba(0,0,0,.2)";
+    }
+    // Tablet view cart below 768px:
+    else if(window.innerWidth <= 768){
         document.getElementById("cartList").style.width = "60%";
+        document.getElementById("cartList").style.display = "flex";
+        document.body.style.backgroundColor = "rgba(0,0,0,.2)";
+    }
+    // Tablet view cart below 992px:
+    else if(window.innerWidth <= 992){
+        document.getElementById("cartList").style.width = "40%";
         document.getElementById("cartList").style.display = "flex";
         document.body.style.backgroundColor = "rgba(0,0,0,.2)";
     }
@@ -58,16 +70,47 @@ function cartDeActive(){
 
 function searchPlace(){
 
-    if(window.innerWidth < 576){
+    // Mobile view search below 576px:
+    if(window.innerWidth <= 576){
+        document.getElementById("searchInput").style.width = "60%";
+        document.getElementById("searchInput").style.display = "flex";
+        document.body.style.backgroundColor = "rgba(0,0,0,.2)";
+    }
+    // Tablet view search below 768px:
+    else if(window.innerWidth <= 768){
+        document.getElementById("searchInput").style.width = "50%";
+        document.getElementById("searchInput").style.display = "flex";
+        document.body.style.backgroundColor = "rgba(0,0,0,.2)";
+    }
+    else if(window.innerWidth <= 992){
+        document.getElementById("searchInput").style.width = "40%";
         document.getElementById("searchInput").style.display = "flex";
         document.body.style.backgroundColor = "rgba(0,0,0,.2)";
     }
 
 }
-
+// function searchPlace(){
 function searchRemove(){
     document.getElementById("searchInput").style.display = "none";
     document.body.style.backgroundColor = "";
 }
 
 // Search Input
+
+
+// Navigation Bar
+
+function navToggle(){
+    const navList = document.getElementById("navList");
+    const selectList = document.querySelectorAll("#selectInputList")
+
+    // Mobile view nav below 576px:
+    if(window.innerWidth <= 992){
+        navList.style.height = navList.style.height === "63vh" ? "0" : "63vh";
+        selectList.forEach((list)=>{
+            list.style.paddingLeft = "0";
+        });
+    }
+}
+
+// Navigation Bar
