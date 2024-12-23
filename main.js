@@ -39,22 +39,35 @@ function cartActive(){
     if(window.innerWidth <= 576){
         document.getElementById("cartList").style.width = "70%";
         document.getElementById("cartList").style.display = "flex";
+        document.getElementById("cartList").style.position = "fixed";
+        document.getElementById("cartList").style.top = "0";
+        document.getElementById("cartList").style.right = "0";
         document.body.style.backgroundColor = "rgba(0,0,0,.2)";
     }
     // Tablet view cart below 768px:
     else if(window.innerWidth <= 768){
         document.getElementById("cartList").style.width = "60%";
         document.getElementById("cartList").style.display = "flex";
+        document.getElementById("cartList").style.position = "fixed";
+        document.getElementById("cartList").style.top = "0";
+        document.getElementById("cartList").style.right = "0";
         document.body.style.backgroundColor = "rgba(0,0,0,.2)";
     }
     // Tablet view cart below 992px:
     else if(window.innerWidth <= 992){
         document.getElementById("cartList").style.width = "40%";
         document.getElementById("cartList").style.display = "flex";
+        document.getElementById("cartList").style.position = "fixed";
+        document.getElementById("cartList").style.top = "0";
+        document.getElementById("cartList").style.right = "0";
         document.body.style.backgroundColor = "rgba(0,0,0,.2)";
     }
     else{
+        document.getElementById("cartList").style.width = "40%";
         document.getElementById("cartList").style.display = "flex";
+        document.getElementById("cartList").style.position = "fixed";
+        document.getElementById("cartList").style.top = "0";
+        document.getElementById("cartList").style.right = "0";
         document.body.style.backgroundColor = "rgba(0,0,0,.2)";
     }
 }
@@ -74,17 +87,27 @@ function searchPlace(){
     if(window.innerWidth <= 576){
         document.getElementById("searchInput").style.width = "60%";
         document.getElementById("searchInput").style.display = "flex";
+        document.getElementById("searchInput").style.position = "fixed";
+        document.getElementById("searchInput").style.top = "0";
+        document.getElementById("searchInput").style.right = "0";
         document.body.style.backgroundColor = "rgba(0,0,0,.2)";
     }
     // Tablet view search below 768px:
     else if(window.innerWidth <= 768){
         document.getElementById("searchInput").style.width = "50%";
         document.getElementById("searchInput").style.display = "flex";
+        document.getElementById("searchInput").style.position = "fixed";
+        document.getElementById("searchInput").style.top = "0";
+        document.getElementById("searchInput").style.right = "0";
         document.body.style.backgroundColor = "rgba(0,0,0,.2)";
     }
+    // Tablet view search below 992px:
     else if(window.innerWidth <= 992){
         document.getElementById("searchInput").style.width = "40%";
         document.getElementById("searchInput").style.display = "flex";
+        document.getElementById("searchInput").style.position = "fixed";
+        document.getElementById("searchInput").style.top = "0";
+        document.getElementById("searchInput").style.right = "0";
         document.body.style.backgroundColor = "rgba(0,0,0,.2)";
     }
 
