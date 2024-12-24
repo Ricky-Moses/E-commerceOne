@@ -137,3 +137,48 @@ function navToggle(){
 }
 
 // Navigation Bar
+
+// slideShow
+
+let currentSlideIndex = 0;
+
+function showSlide(index){
+    const slides = document.querySelectorAll(".main-box .img-adContent")
+    const dots = document.querySelectorAll(".dots .dot");
+
+    // Function to display current slides
+    if(index >= slides.length){
+        currentSlideIndex = 0;
+    }
+    else if(index < 0){
+        currentSlideIndex = slides.length - 1;
+    }
+    else{
+        currentSlideIndex = index;
+    }
+
+    // Hides all slides and dots and displays only the current slide and dot
+    // forEach function doesn't calculate or know the 'currentSlideIndex' on its own. It simple reads the value of global 'currentSlideIndex' variable, which already updated by the showSlide function.
+
+    // slides.forEach((slide, i)=>{ // i is the index of the slide
+    /*
+    currentSlideIndex = 0
+    i = 0 => 0 - 0 = 0 => 0%
+    i = 1 => 1 - 0 = 1 => 100%
+    i = 2 => 2 - 0 = 2 => 200%
+    */
+    slides.forEach((slide, i)=>{
+        slide.style.left = `${100 * (i - currentSlideIndex)}%`;
+    });
+
+    dots.forEach((dot)=>{
+        dot.classList.remove("active");
+    });
+    dots[currentSlideIndex].classList.add("active");
+}
+
+function currentSlide(index){
+    showSlide(index)
+}
+
+// slideShow
