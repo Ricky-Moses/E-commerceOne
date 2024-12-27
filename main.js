@@ -209,8 +209,24 @@ function clickArrow(direction) {
 }
 
 
-  
+// items details
 
+function popDetailOpen(id){
+    
+    const itemDetails = document.getElementById(id);
+
+    itemDetails.style.width = "100%";
+}
+
+function popDetailClose(id){
+    
+    const itemDetails = document.getElementById(id);
+
+    itemDetails.style.width = "0%";
+
+}
+
+// items details
 
 // Category
 
