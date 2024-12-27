@@ -16,17 +16,7 @@ function bgNoneBox(){
     document.getElementById("outlineColorInput").style.outline = "none";
 }
 
-// Responsive Mobile
-
-// let headInputDrop = document.getElementById("inputDrop");
-
-// function toggleInput(){
-//     headInputDrop.style.display = window.innerWidth < 992 ? "none" : "flex";
-// }
-
-// toggleInput();
-
-// window.addEventListener("resize", toggleInput) // resize event listener for inputDrop on mobile view and below 992px.
+// Responsive Mobile View
 
 // InputDrop
 
@@ -127,7 +117,7 @@ function navToggle(){
     const navList = document.getElementById("navList");
     const selectList = document.querySelectorAll("#selectInputList")
 
-    // Mobile view nav below 576px:
+    // Below 992px screen view
     if(window.innerWidth <= 992){
         navList.style.height = navList.style.height === "63vh" ? "0" : "63vh";
         selectList.forEach((list)=>{
@@ -138,6 +128,8 @@ function navToggle(){
 
 // Navigation Bar
 
+
+// Advertisement
 // slideShow
 
 let currentSlideIndex = 0;
@@ -156,12 +148,12 @@ function showSlide(index){
     else{
         currentSlideIndex = index;
     }
-
-    // Hides all slides and dots and displays only the current slide and dot
-    // forEach function doesn't calculate or know the 'currentSlideIndex' on its own. It simple reads the value of global 'currentSlideIndex' variable, which already updated by the showSlide function.
-
-    // slides.forEach((slide, i)=>{ // i is the index of the slide
     /*
+    * Hides all slides and dots and displays only the current slide and dot
+    * forEach function doesn't calculate or know the 'currentSlideIndex' on its own. It simple reads the value of global 'currentSlideIndex' variable, which already updated by the showSlide function.
+    */
+    // slides.forEach((slide, i)=>{ // i is the index of the slide
+    /* Example: 
     currentSlideIndex = 0
     i = 0 => 0 - 0 = 0 => 0%
     i = 1 => 1 - 0 = 1 => 100%
@@ -182,3 +174,43 @@ function currentSlide(index){
 }
 
 // slideShow
+// Advertisement
+
+// Category
+
+let currentIndex = 0;
+
+function clickArrow(direction) {
+    const container = document.querySelector(".category__content");
+    const items = document.querySelectorAll(".category__items");
+
+    const itemWidth = items[0].offsetWidth + 5; 
+    const visibleItems = Math.floor(container.offsetWidth / itemWidth); 
+    const maxIndex = items.length - (visibleItems); 
+
+    // Update currentIndex
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+    // Move the container using translateX
+    const newScrollLeft = -currentIndex * itemWidth; // Negative to move left
+    container.style.transform = `translateX(${newScrollLeft}px)`;
+    container.style.transition = "transform 0.5s ease-in-out"; // Smooth animation
+
+    // Debugging logs
+    console.log("Container Width:", container.offsetWidth); // 1240
+    console.log("Item Width:", itemWidth); // 225
+    console.log("Items Length:", items.length); // 10
+    console.log("Visible Items:", visibleItems); // 5
+    console.log("Max Index:", maxIndex); // 5
+    console.log("Current Index:", currentIndex);
+    console.log("New Scroll Left:", newScrollLeft);
+}
+
+
+  
+
+
+// Category
+

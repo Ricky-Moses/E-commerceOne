@@ -1,259 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-commerce</title>
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- Custom Style sheet -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Javascript Sheet -->
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <!-- Head -->
     <section id="head">
-        <header>
-            <!-- Head title image -->
-            <div class="head__img">
-                <a href=""><img src="image/pngwing.com.png" width="60px" height="60px" alt=""></a>
-                <div class="head__title">
-                    <h1>FOOD<span>MART</span></h1>
-                    <p>GROCERY STORE</p>
-                </div>
+      <header>
+        <!-- Head title image -->
+        <div class="head__img">
+          <a href=""
+            ><img src="image/pngwing.com.png" width="60px" height="60px" alt=""
+          /></a>
+          <div class="head__title">
+            <h1>FOOD<span>MART</span></h1>
+            <p>GROCERY STORE</p>
+          </div>
+        </div>
+        <!-- Head title image -->
+
+        <!-- User Input and dropdown -->
+
+        <div class="head__inputDrop" id="inputDrop">
+          <div class="dropdown">
+            <select
+              name=""
+              id="outlineColorDropDown"
+              onclick="bgPrimary()"
+              onblur="bgNone()"
+            >
+              <a href="">
+                <option value="">All Categories</option>
+              </a>
+              <a href="">
+                <option value="">Groceries</option>
+              </a>
+              <a href="">
+                <option value="">Drinks</option>
+              </a>
+              <a href="">
+                <option value="">Sweets</option>
+              </a>
+            </select>
+          </div>
+          <div class="inputBox">
+            <input
+              type="search"
+              name=""
+              id="outlineColorInput"
+              onclick="bgPrimaryBox()"
+              onblur="bgNoneBox()"
+            />
+          </div>
+          <label for="outlineColorInput" id="searchIcon" class="searchBar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </label>
+        </div>
+
+        <!-- User Input and dropdown -->
+
+        <!-- Contact details -->
+
+        <div class="head__contact" id="contactDetail">
+          <div class="number">
+            <p>For Support?</p>
+            <span>+91-9384956809</span>
+          </div>
+          <div class="icon">
+            <i class="fa-regular fa-user"></i>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="cartClick">
+            <p onclick="cartActive()">Your Cart ▼</p>
+            <p>₹1245.00</p>
+          </div>
+        </div>
+        <!-- Contact details -->
+
+        <!-- Cart -->
+
+        <div class="cart" id="cartList">
+          <div class="closeIcon" id="closeIcon" onclick="cartDeActive()">
+            <i class="fa-solid fa-x"></i>
+          </div>
+          <div class="cartItems">
+            <h1>Your Cart</h1>
+            <h1>3</h1>
+          </div>
+          <div class="itemName">
+            <div class="itemDescribe">
+              <div class="">
+                <p>Growers cider</p>
+                <p>Brief description</p>
+              </div>
+              <div class="rupee">₹300</div>
             </div>
-            <!-- Head title image -->
-
-            <!-- User Input and dropdown -->
-
-            <div class="head__inputDrop" id="inputDrop">
-                <div class="dropdown">
-                    <select name="" id="outlineColorDropDown" onclick="bgPrimary()" onblur="bgNone()">
-                        <a href="">
-                            <option value="">All Categories</option>
-                        </a>
-                        <a href="">
-                            <option value="">Groceries</option>
-                        </a>
-                        <a href="">
-                            <option value="">Drinks</option>
-                        </a>
-                        <a href="">
-                            <option value="">Sweets</option>
-                        </a>
-                    </select>
-                </div>
-                <div class="inputBox">
-                    <input type="search" name="" id="outlineColorInput" onclick="bgPrimaryBox()" onblur="bgNoneBox()">
-                </div>
-                <label for="outlineColorInput" id="searchIcon" class="searchBar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </label>
+            <div class="itemDescribe">
+              <div class="">
+                <p>Fresh Graphs</p>
+                <p>Brief description</p>
+              </div>
+              <div class="rupee">₹400</div>
             </div>
-
-            <!-- User Input and dropdown -->
-
-            <!-- Contact details -->
-
-            <div class="head__contact" id="contactDetail">
-                <div class="number">
-                    <p>For Support?</p>
-                    <span>+91-9384956809</span>
-                </div>
-                <div class="icon">
-                    <i class="fa-regular fa-user"></i>
-                    <i class="fa-regular fa-heart"></i>
-                </div>
-                <div class="cartClick">
-                    <p onclick="cartActive()">Your Cart ▼</p>
-                    <p>₹1245.00</p>
-                </div>
+            <div class="itemDescribe">
+              <div class="">
+                <p>Heinz tomato ketchup</p>
+                <p>Brief description</p>
+              </div>
+              <div class="rupee">₹500</div>
             </div>
-            <!-- Contact details -->
-
-            <!-- Cart -->
-
-            <div class="cart" id="cartList">
-                <div class="closeIcon" id="closeIcon" onclick="cartDeActive()">
-                    <i class="fa-solid fa-x"></i>
-                </div>
-                <div class="cartItems">
-                    <h1>Your Cart</h1>
-                    <h1>3</h1>
-                </div>
-                <div class="itemName">
-                    <div class="itemDescribe">
-                        <div class="">
-                            <p>Growers cider</p>
-                            <p>Brief description</p>
-                        </div>
-                        <div class="rupee">₹300</div>
-                    </div>
-                    <div class="itemDescribe">
-                        <div class="">
-                            <p>Fresh Graphs</p>
-                            <p>Brief description</p>
-                        </div>
-                        <div class="rupee">₹400</div>
-                    </div>
-                    <div class="itemDescribe">
-                        <div class="">
-                            <p>Heinz tomato ketchup</p>
-                            <p>Brief description</p>
-                        </div>
-                        <div class="rupee">₹500</div>
-                    </div>
-                    <div class="itemDescribe">
-                        <div class="">
-                            <p>Total(Rs)</p>
-                        </div>
-                        <div class="rupee">₹1200</div>
-                    </div>
-                </div>
-                <div class="stocks">
-                    <p>Continue to Checkouts</p>
-                </div>
+            <div class="itemDescribe">
+              <div class="">
+                <p>Total(Rs)</p>
+              </div>
+              <div class="rupee">₹1200</div>
             </div>
+          </div>
+          <div class="stocks">
+            <p>Continue to Checkouts</p>
+          </div>
+        </div>
 
-            <!-- Cart -->
+        <!-- Cart -->
 
-            <!-- Below 992px -->
+        <!-- Below 992px -->
 
-            <!-- Contact Icons -->
-            <div class="contactDetailIcon">
-                <i class="fa-regular fa-user"></i>
-                <i class="fa-regular fa-heart"></i>
-                <!-- Cart icon here active the cart element -->
-                <i class="fa-solid fa-cart-shopping" onclick="cartActive()"></i>
-                <i class="fa-solid fa-magnifying-glass" onclick="searchPlace()"></i>
-            </div>
+        <!-- Contact Icons -->
+        <div class="contactDetailIcon">
+          <i class="fa-regular fa-user"></i>
+          <i class="fa-regular fa-heart"></i>
+          <!-- Cart icon here active the cart element -->
+          <i class="fa-solid fa-cart-shopping" onclick="cartActive()"></i>
+          <i class="fa-solid fa-magnifying-glass" onclick="searchPlace()"></i>
+        </div>
 
-            <!-- Search input -->
-            <div class="searchInput" id="searchInput">
-                <i class="fa-solid fa-x" id="searchX" onclick="searchRemove()"></i>
-                <h1>Search</h1>
-                <input type="search" placeholder="What are looking for?">
-            </div>
-            <!-- Search input -->
+        <!-- Search input -->
+        <div class="searchInput" id="searchInput">
+          <i class="fa-solid fa-x" id="searchX" onclick="searchRemove()"></i>
+          <h1>Search</h1>
+          <input type="search" placeholder="What are looking for?" />
+        </div>
+        <!-- Search input -->
 
-            <!-- Contact Icons -->
+        <!-- Contact Icons -->
 
-            <!-- Below 992px -->
-        </header>
+        <!-- Below 992px -->
+      </header>
     </section>
+    <!-- Head -->
 
     <!-- Navigation bar -->
-
     <section id="navBar">
-        <div class="toggleIcon" id="toggleIcon" >
-            <i onclick="navToggle()" class="fa-solid fa-bars"></i>
-        </div>
-        <nav id="navList">
-            <ul>
-                <li>
-                    <select name="" id="selectInputList">
-                        <a href=""><option value="">Shop by Department</option></a>
-                        <a href=""><option value="">Groceries</option></a>
-                        <a href=""><option value="">Drinks</option></a>
-                        <a href=""><option value="">Sweets</option></a>
-                    </select>
-                </li>
-                <li><a href="">Women</a></li>
-                <li><a href="">Men</a></li>
-                <li><a href="">Kids</a></li>
-                <li><a href="">Accessories</a></li>
-                <li>
-                    <select name="" id="selectInputList">
-                        <option value="">Pages</option>
-                        <a href=""><option value="">About Us</option></a>
-                        <a href=""><option value="">Shop</option></a>
-                        <a href=""><option value="">Single Product</option></a>
-                        <a href=""><option value="">Cart</option></a>
-                        <a href=""><option value="">Checkouts</option></a>
-                        <a href=""><option value="">Single Post</option></a>
-                        <a href=""><option value="">Styles</option></a>
-                        <a href=""><option value="">Contact</option></a>
-                        <a href=""><option value="">Thank You</option></a>
-                        <a href=""><option value="">My Account</option></a>
-                    </select>
-                </li>
-                <li><a href="">Brand</a></li>
-                <li><a href="">Sale</a></li>
-                <li><a href="">Blog</a></li>
-            </ul>
-        </nav>
-    </section> 
+      <div class="toggleIcon" id="toggleIcon">
+        <i onclick="navToggle()" class="fa-solid fa-bars"></i>
+      </div>
+      <nav id="navList">
+        <ul>
+          <li>
+            <select name="" id="selectInputList">
+              <a href=""><option value="">Shop by Department</option></a>
+              <a href=""><option value="">Groceries</option></a>
+              <a href=""><option value="">Drinks</option></a>
+              <a href=""><option value="">Sweets</option></a>
+            </select>
+          </li>
+          <li><a href="">Women</a></li>
+          <li><a href="">Men</a></li>
+          <li><a href="">Kids</a></li>
+          <li><a href="">Accessories</a></li>
+          <li>
+            <select name="" id="selectInputList">
+              <option value="">Pages</option>
+              <a href=""><option value="">About Us</option></a>
+              <a href=""><option value="">Shop</option></a>
+              <a href=""><option value="">Single Product</option></a>
+              <a href=""><option value="">Cart</option></a>
+              <a href=""><option value="">Checkouts</option></a>
+              <a href=""><option value="">Single Post</option></a>
+              <a href=""><option value="">Styles</option></a>
+              <a href=""><option value="">Contact</option></a>
+              <a href=""><option value="">Thank You</option></a>
+              <a href=""><option value="">My Account</option></a>
+            </select>
+          </li>
+          <li><a href="">Brand</a></li>
+          <li><a href="">Sale</a></li>
+          <li><a href="">Blog</a></li>
+        </ul>
+      </nav>
+    </section>
     <!-- Navigation bar -->
 
     <!-- Advertisement -->
-
     <main id="adverTise">
-        <div class="main-box">
-            <!-- Groceries -->
-            <div class="img-adContent" >
-                <img src="image/Main ad.png" alt="Vegetables">
-                <div class="adContent">
-                    <h1>100% Natural</h1>
-                    <h1>Fresh Groceries, <br>Fresh Life!</h1>
-                    <p>Stock your kitchen with the finest selection of fresh produce, pantry staples, and everyday essentials—all under one roof! 🍎🥦🍞</p>
-                    <ul>
-                        <li><b>Farm-Fresh Produce:</b> Vibrant fruits and veggies, straight from the farm to your table.</li>
-                        <li><b>Special Deals Every Day:</b> Save big on your favorites with unbeatable discounts.
-                        </li>
-                    </ul>
-                    <a href=""><button>Shop Now</button></a>
-                </div>
-            </div>
-            <!-- Drinks -->
-            <div class="img-adContent" >
-                <img src="image/Drinks ad.png" alt="Coconut water" >
-                <div class="adContent">
-                    <h1>100% Natural</h1>
-                    <h1>Drink Natural, <br> Feel Alive.</h1>
-                    <p>Looking for a refreshing way to hydrate while nourishing your body? Say hello to our range of Natural Drinks—pure, delicious, and packed with goodness.</p>
-                    <ul>
-                        <li><b>🍃 100% Natural Ingredients:</b> Crafted with love using only the finest fruits, herbs, and plants. No artificial additives, no preservatives—just nature's best.</li>
-                        <li><b>Special Deals Every Day:</b> Save big on your favorites with unbeatable discounts.
-                        </li>
-                    </ul>
-                    <a href=""><button>Shop Now</button></a>
-                </div>
-            </div>
-            <!-- Drinks -->
-            <!-- Sweets -->
-            <div class="img-adContent" >
-                <img src="image/Sweets ad.png" alt="Coconut water">
-                <div class="adContent">
-                    <h1>100% Natural</h1>
-                    <h1>🎉 Indulge in Sweet Bliss!</h1>
-                    <p>Looking for a treat to brighten your day? Look no further! Our irresistible selection of sweets is here to make every moment sweeter.</p>
-                    <ul>
-                        <li><b>🍭 Handcrafted Delights:</b> Made with love, our sweets are perfect for every occasion.</li>
-                        <li><b>🍫 Rich Flavors:</b> From creamy chocolates to traditional delights, we’ve got it all!</li>
-                        <li><b>🎁 Perfect Gifts:</b> Surprise your loved ones with our delightful sweets and spread joy!</li>
-                        <li><b>Special Deals Every Day:</b> Save big on your favorites with unbeatable discounts.</li>
-                    </ul>
-                    <a href=""><button>Shop Now</button></a>
-                </div>
-            </div>
-            <!-- Sweets -->
-            <!-- Dots -->
-            <div class="dots">
-                <div class="dot active" onclick="currentSlide(0)"></div>
-                <div class="dot" onclick="currentSlide(1)"></div>
-                <div class="dot" onclick="currentSlide(2)"></div>
-            </div>
-            <!-- Dots -->
+      <!-- Main box -->
+      <div class="main-box">
+        <!-- Groceries -->
+        <div class="img-adContent">
+          <img src="image/Main ad.png" alt="Vegetables" />
+          <div class="adContent">
+            <h1>100% Natural</h1>
+            <h1>Fresh Groceries, <br />Fresh Life!</h1>
+            <p>
+              Stock your kitchen with the finest selection of fresh produce,
+              pantry staples, and everyday essentials—all under one roof! 🍎🥦🍞
+            </p>
+            <ul>
+              <li>
+                <b>Farm-Fresh Produce:</b> Vibrant fruits and veggies, straight
+                from the farm to your table.
+              </li>
+              <li>
+                <b>Special Deals Every Day:</b> Save big on your favorites with
+                unbeatable discounts.
+              </li>
+            </ul>
+            <a href=""><button>Shop Now</button></a>
+          </div>
         </div>
-        <!-- <div class="side-box"></div> -->
-        <!-- <div class="side-box"></div> -->
-    </main>
+        <!-- Drinks -->
+        <div class="img-adContent">
+          <img src="image/Drinks ad.png" alt="Coconut water" />
+          <div class="adContent">
+            <h1>100% Natural</h1>
+            <h1>
+              Drink Natural, <br />
+              Feel Alive.
+            </h1>
+            <p>
+              Looking for a refreshing way to hydrate while nourishing your
+              body? Say hello to our range of Natural Drinks—pure, delicious,
+              and packed with goodness.
+            </p>
+            <ul>
+              <li>
+                <b>🍃 100% Natural Ingredients:</b> Crafted with love using only
+                the finest fruits, herbs, and plants. No artificial additives,
+                no preservatives—just nature's best.
+              </li>
+              <li>
+                <b>Special Deals Every Day:</b> Save big on your favorites with
+                unbeatable discounts.
+              </li>
+            </ul>
+            <a href=""><button>Shop Now</button></a>
+          </div>
+        </div>
+        <!-- Drinks -->
+        <!-- Sweets -->
+        <div class="img-adContent">
+          <img src="image/Sweets ad.png" alt="Coconut water" />
+          <div class="adContent">
+            <h1>100% Natural</h1>
+            <h1>🎉 Indulge in Sweet Bliss!</h1>
+            <p>
+              Looking for a treat to brighten your day? Look no further! Our
+              irresistible selection of sweets is here to make every moment
+              sweeter.
+            </p>
+            <ul>
+              <li>
+                <b>🍭 Handcrafted Delights:</b> Made with love, our sweets are
+                perfect for every occasion.
+              </li>
+              <li>
+                <b>🍫 Rich Flavors:</b> From creamy chocolates to traditional
+                delights, we’ve got it all!
+              </li>
+              <li>
+                <b>🎁 Perfect Gifts:</b> Surprise your loved ones with our
+                delightful sweets and spread joy!
+              </li>
+              <li>
+                <b>Special Deals Every Day:</b> Save big on your favorites with
+                unbeatable discounts.
+              </li>
+            </ul>
+            <a href=""><button>Shop Now</button></a>
+          </div>
+        </div>
+        <!-- Sweets -->
+        <!-- Dots -->
+        <div class="dots">
+          <div class="dot active" onclick="currentSlide(0)"></div>
+          <div class="dot" onclick="currentSlide(1)"></div>
+          <div class="dot" onclick="currentSlide(2)"></div>
+        </div>
+        <!-- Dots -->
+      </div>
+      <!-- Main box -->
 
+      <!-- Side box - 1 -->
+      <div class="side-box side-one">
+        <div class="side1-content">
+          <p>20% Off</p>
+          <p>⎯⎯⎯⎯⎯⎯ &nbsp;<span>SALE</span></p>
+          <p>Fruits & Vegetables</p>
+          <p><a href="">Shop Collection →</a></p>
+        </div>
+        <img src="image/Basket F&V.png" alt="" />
+      </div>
+      <!-- Side box - 1 -->
+
+      <!-- Side box - 2 -->
+      <div class="side-box side-two">
+        <div class="side2-content">
+          <p>20% Off</p>
+          <p>⎯⎯⎯⎯⎯⎯ &nbsp;<span>SALE</span></p>
+          <p>Baked Products</p>
+          <p><a href="">Shop Collection →</a></p>
+        </div>
+        <img src="image/Baked product.png" alt="" />
+      </div>
+      <!-- Side box - 2 -->
+    </main>
     <!-- Advertisement -->
-</body>
-<script src="main.js"></script>
+
+    <!-- Category -->
+    <section id="category">
+      <div class="category__title">
+        <h1>Category</h1>
+        <div class="arrows">
+          <button onclick="clickArrow(-1)" class="prev">⫷</button>
+          <button onclick="clickArrow(1)" class="next">⫸</button>
+        </div>
+      </div>
+      <div class="category__content">
+        <div class="category__items">
+          <img src="image/Leafy greens.png" alt="" />
+          <div class="img-content">
+            <h1>Leafy Greens</h1>
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+        </div>
+        <div class="category__items">
+          <img src="image/Root vegetables.png" alt="" />
+          <div class="img-content">
+            <h1>Root Vegetable</h1>
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+        </div>
+        <div class="category__items">
+          <img src="image/Bulb vegetables.png" alt="" />
+          <div class="img-content">
+            <h1>Bulb Vegetable</h1>
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+        </div>
+        <div class="category__items">
+          <img src="image/Stem vegetables.png" alt="" />
+          <div class="img-content">
+            <h1>Stem Vegetable</h1>
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+        </div>
+        <div class="category__items">
+          <img src="image/Flower vegetables.png" alt="" />
+          <div class="img-content">
+            <h1>Flower Vegetable</h1>
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+        </div>
+        <div class="category__items">
+          <img src="image/Fruits vegetables.png" alt="" />
+          <div class="img-content">
+            <h1>Fruits Vegetables</h1>
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+        </div>
+        <div class="category__items">
+          <img src="image/Pod vegetables.png" alt="" />
+          <div class="img-content">
+            <h1>Pod Vegetables</h1>
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+        </div>
+        <div class="category__items">
+          <img src="image/Tuber vegetables.png" alt="" />
+          <div class="img-content">
+            <h1>Tuber Vegetables</h1>
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+        </div>
+        <div class="category__items">
+          <img src="image/Seed vegetables.png" alt="" />
+          <div class="img-content">
+            <h1>Seed Vegetables</h1>
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+        </div>
+        <div class="category__items">
+          <img src="image/Mushroom.png" alt="" />
+          <div class="img-content">
+            <h1>Mushroom</h1>
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Category -->
+  </body>
 </html>
