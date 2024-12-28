@@ -593,7 +593,7 @@ header .cart{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px;
 }
 
 .category__title .arrows button{
@@ -609,7 +609,7 @@ header .cart{
     gap: 20px;
     padding: 10px;
     width: 100%;
-    height: 50vh;
+    height: 45vh;
     scroll-behavior: smooth;
 }
 
@@ -687,7 +687,173 @@ header .cart{
 /* Category */
 
 
+/* Category Drinks */
 
+#categoryDrinks{
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#categoryDrinks .drinks__title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.drinks__title .arrows button{
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+
+.categoryDrinks__content{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    width: 100%;
+    height: 45vh;
+    scroll-behavior: smooth;
+}
+
+.categoryDrinks__content .categoryDrinks__items{
+    width: 18%;
+    height: 40vh;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow-x: scroll;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    transition: all .5s ease;
+    border-radius: 10px;
+    position: relative;
+}
+
+.categoryDrinks__content .categoryDrinks__items:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+.categoryDrinks__items img{
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.categoryDrinks__items .img-content{
+    font-variant: small-caps;
+    text-align: center;
+}
+
+.categoryDrinks__items .img-content i{
+    border-radius: 50%;
+    transition: all .5s ease;
+    cursor: var(--cursor);
+}
+
+.categoryDrinks__items .img-content i:hover{
+    outline: 10px solid rgba(116, 116, 116, 0.162);
+    scale: 1.1;
+}
+
+.categoryDrinks__items .items__details{
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0%;
+    left: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all .5s ease;
+    background: #d2691e60;
+    backdrop-filter: blur(5px);
+    color: var(--text-color-W);
+}
+
+.categoryDrinks__items .items__details i{
+    float: left;
+    font-size: 1em;
+    margin: 10px;
+    cursor: var(--cursor);
+}
+
+.categoryDrinks__items .items__details p{
+    margin: 10px;
+    font-weight: 500;
+}
+
+.categoryDrinks__items .items__details ul{
+    margin: 10px;
+    font-weight: 500;
+}
+
+/* Category Drinks */
+
+/* Offer-1 */
+
+.offer1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.offer1 .offer-sweets, .offer-ice_cream{
+    height: 40vh;
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 1fr;
+}
+
+.offer1 .offer-sweets{
+    background: var(--third-box-D);
+}
+
+.offer1 .offer--detail{
+    padding: 40px 20px 0;
+    /* border: solid; */
+}
+
+.offer--detail h2{
+    font-family: var(--font-family);
+    color: var(--text-color-GY);
+}
+
+.offer--detail h1{
+    padding: 10px 0;
+}
+
+.offer--detail button{
+    margin:10px 0;
+    padding: 7.5px 15px;
+    background: transparent;
+    border-radius: 5px;
+    border:1px solid;
+    outline: none;
+    cursor: var(--cursor);
+}
+
+.offer--detail button:hover{
+    background: var(--bg-color-B);
+    color: var(--text-color-W);
+}
+
+.offer1 img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.offer1 .offer-ice_cream{
+    background: var(--second-box-S);
+}
+/* Offer-1 */
 
 
 
@@ -759,13 +925,36 @@ header .cart{
     /* Category */
 
     .category__content{
-        width: 105%;
+        width: 100%;
     }
     .category__content .category__items{
-        width: 20%;
+        width: 65%;
     }
 
     /* Category */
+
+    /* Category Drinks */
+
+    .categoryDrinks__content{
+        width: 100%;
+    }
+    .categoryDrinks__content .categoryDrinks__items{
+        width: 65%;
+    }
+
+    /* Category Drinks */
+
+    /* Offer1 */
+
+    .offer1 .offer--detail{
+        padding: 40px 0 0 20px;
+    }
+
+    .offer1 .offer-sweets, .offer-ice_cream{
+        height: 45vh;
+    }
+    
+    /* Offer1 */
 }
 
 @media (max-width: 992px) {
@@ -854,13 +1043,34 @@ header .cart{
     /* Category */
 
     .category__content{
-        width: 90%;
+        width: 100%;
     }
     .category__content .category__items{
-        width: 30%;
+        width: 70%;
     }
 
     /* Category */
+
+    /* Category Drinks */
+
+    .categoryDrinks__content{
+        width: 100%;
+    }
+    .categoryDrinks__content .categoryDrinks__items{
+        width: 70%;
+    }
+
+    /* Category Drinks */
+
+    /* offer1 */
+
+    .offer1{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    /* offer1 */
+
 }
 
 @media (max-width: 768px) {
@@ -907,13 +1117,24 @@ header .cart{
     /* Category */
 
     .category__content{
-        width: 75%;
+        width: 100%;
     }
     .category__content .category__items{
-        width: 50%;
+        width: 60%;
     }
 
     /* Category */
+
+    /* Category Drinks */
+
+    .categoryDrinks__content{
+        width: 100%;
+    }
+    .categoryDrinks__content .categoryDrinks__items{
+        width: 60%;
+    }
+
+    /* Category Drinks */
 }
 
 
@@ -981,6 +1202,10 @@ header .cart{
         gap: 20px;
     }
 
+    .main-box .img-adContent:nth-child(3) .adContent ul li:nth-child(3){
+        display: none;
+    }
+
     #adverTise .side-box:nth-child(2){
         grid-column: 1 / span 7;
         grid-row: 29 / span 17;
@@ -1027,13 +1252,44 @@ header .cart{
         width: 104%;
     }
     .category__content .category__items{
-        width: 60%;
+        width: 65%;
     }
     
     /* Category */
+
+    /* Category Drinks */
+
+    .categoryDrinks__content{
+        width: 100%;
+    }
+    .categoryDrinks__content .categoryDrinks__items{
+        width: 65%;
+    }
+
+    /* Category Drinks */
+
+    /* Offer1 */
+
+    .offer1 .offer-sweets, .offer-ice_cream{
+        height: 50vh;
+    }
+
+    .offer1 img{
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .offer1 .offer-sweets{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .offer1 .offer-ice_cream{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* Offer1 */
 }
 
-@media (max-width: 406px){
+@media (max-width: 408px){
     /* Advertisement */
 
     #adverTise .main-box{
@@ -1092,13 +1348,28 @@ header .cart{
     /* Category */
 
     .category__content{
-        width: 58%;
+        width: 65%;
     }
     .category__content .category__items{
         width: 100%;
     }
     
     /* Category */
+
+    /* Category Drinks */
+
+    .categoryDrinks__content{
+        width: 65%;
+    }
+    .categoryDrinks__content .categoryDrinks__items{
+        width: 100%;
+    }
+
+    /* Category Drinks */
+
+    /* Offer1 */
+    
+    /* Offer1 */
 }
 
 /* Responsive */

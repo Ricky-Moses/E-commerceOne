@@ -176,7 +176,7 @@ function currentSlide(index){
 // slideShow
 // Advertisement
 
-// Category
+// Category Vegetables
 
 let currentIndex = 0;
 
@@ -209,7 +209,35 @@ function clickArrow(direction) {
 }
 
 
+// Category Vegetables
+
+// Category Drinks
+
+let currentDrinkIndex = 0;
+
+function clickDrinkArrow(direction){
+    const drinkContainer = document.querySelector(".categoryDrinks__content");
+    const drinkItems = document.querySelectorAll(".categoryDrinks__items");
+
+    const drinkItemWidth = drinkItems[0].offsetWidth + 5;
+    const drinkVisibleItem = Math.floor(drinkContainer.offsetWidth / drinkItemWidth);
+    const drinkMaxIndex = drinkItems.length - drinkVisibleItem;
+
+    currentDrinkIndex += direction;
+
+    if(currentDrinkIndex < 0) currentDrinkIndex = 0;
+    else if(currentDrinkIndex > drinkMaxIndex) currentDrinkIndex = drinkMaxIndex;
+
+    const new2ScrollLeft = -currentDrinkIndex * drinkItemWidth;
+    drinkContainer.style.transform = `translateX(${new2ScrollLeft}px)`;
+    drinkContainer.style.transition = `transform 0.5s ease-in-out`;
+
+}
+
+// Category Drinks
+
 // items details
+
 
 function popDetailOpen(id){
     
@@ -227,6 +255,3 @@ function popDetailClose(id){
 }
 
 // items details
-
-// Category
-
