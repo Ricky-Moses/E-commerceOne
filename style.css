@@ -795,7 +795,7 @@ header .cart{
 
 /* Offer-1 */
 
-.offer1{
+#offer1{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 20px;
@@ -803,8 +803,8 @@ header .cart{
     overflow: hidden;
 }
 
-.offer1 .offer-sweets, .offer-ice_cream{
-    height: 40vh;
+#offer1 .offer-sweets, .offer-ice_cream{
+    height: 50vh;
     border-radius: 10px;
     overflow: hidden;
     display: grid;
@@ -812,11 +812,11 @@ header .cart{
     grid-template-columns: 2fr 1fr;
 }
 
-.offer1 .offer-sweets{
+#offer1 .offer-sweets{
     background: var(--third-box-D);
 }
 
-.offer1 .offer--detail{
+#offer1 .offer--detail{
     padding: 40px 20px 0;
     /* border: solid; */
 }
@@ -845,15 +845,190 @@ header .cart{
     color: var(--text-color-W);
 }
 
-.offer1 img{
+#offer1 img{
     width: 100%;
     object-fit: contain;
 }
 
-.offer1 .offer-ice_cream{
+#offer1 .offer-ice_cream{
     background: var(--second-box-S);
 }
 /* Offer-1 */
+
+/* Variety of healthy Foods */
+
+#healthyFood{
+    height: 100vh;
+    padding: 20px;
+}
+
+#healthyFood .food-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.food-list ul{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.food-list ul li{
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: var(--cursor);
+}
+
+.food-list ul .active{
+    border-bottom: 2px solid var(--text-color-GY);
+}
+
+.allList{
+    padding: 20px;
+    display: none;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    transition: all 0.5s ease;
+}
+
+.allList .all-listOf-food{
+    height: 78vh;
+}
+
+
+.allList div{
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.allFoodList{
+    display: grid;
+}
+
+.allList img{
+    display: block;
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+    background: #00000010;
+    border-radius: 10px;
+}
+
+.allList span {
+    display: block;
+}
+
+.allList span{
+    text-align: center;
+    font-variant: small-caps;
+    margin: 5px 0;
+}
+
+.allList .FoodList-detail span:nth-child(1){
+    margin: 20px 0 0;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.allList .FoodList-detail .product-quantity{
+    display: inline;
+    padding: 5px 25px;
+}
+
+.allList .FoodList-detail label{
+    font-family: none;
+}
+
+.allList .FoodList-detail button{
+    margin: 5px 15px 0;
+    padding: 1px 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+}
+
+.allList .addCart{
+    padding: 10px;
+}
+
+.allList .addCart a{
+    color: var(--bg-color-B);
+}
+
+.allList .addCart:hover i{
+    color: var(--text-color-GY);
+}
+
+/* Variety of healthy Foods */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -946,15 +1121,27 @@ header .cart{
 
     /* Offer1 */
 
-    .offer1 .offer--detail{
+    #offer1 .offer--detail{
         padding: 40px 0 0 20px;
     }
 
-    .offer1 .offer-sweets, .offer-ice_cream{
-        height: 45vh;
+    #offer1 .offer-sweets, .offer-ice_cream{
+        height: 50vh;
     }
     
     /* Offer1 */
+
+    /* Variety of healthy food */
+
+    .allList{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .allList .all-listOf-food{
+        height: 85vh;
+    }
+
+    /* Variety of healthy food */
 }
 
 @media (max-width: 992px) {
@@ -1064,12 +1251,23 @@ header .cart{
 
     /* offer1 */
 
-    .offer1{
+    #offer1{
         grid-template-columns: repeat(1, 1fr);
     }
 
-
     /* offer1 */
+
+    /* Variety of healthy food */
+
+    .allList{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .allList .all-listOf-food{
+        height: 88vh;
+    }
+
+    /* Variety of healthy food */
 
 }
 
@@ -1135,6 +1333,22 @@ header .cart{
     }
 
     /* Category Drinks */
+
+    /* Variety of healthy foods */
+
+    #healthyFood .food-list{
+        flex-direction: column;
+    }
+
+    .allList{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .allList .all-listOf-food{
+        height: 88vh;
+    }
+
+    /* Variety of healthy foods */
 }
 
 
@@ -1270,23 +1484,39 @@ header .cart{
 
     /* Offer1 */
 
-    .offer1 .offer-sweets, .offer-ice_cream{
+    #offer1 .offer-sweets, .offer-ice_cream{
         height: 50vh;
     }
 
-    .offer1 img{
+    #offer1 img{
         height: 100%;
         object-fit: contain;
     }
 
-    .offer1 .offer-sweets{
+    #offer1 .offer-sweets{
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .offer1 .offer-ice_cream{
+    #offer1 .offer-ice_cream{
         grid-template-columns: repeat(1, 1fr);
     }
     /* Offer1 */
+
+    /* Variety of healthy foods */
+
+    .food-list ul{
+        flex-direction: column;
+    }
+
+    .allList{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .allList .all-listOf-food{
+        height: 88vh;
+    }
+
+    /* Variety of healthy foods */
 }
 
 @media (max-width: 408px){

@@ -255,3 +255,54 @@ function popDetailClose(id){
 }
 
 // items details
+
+// Variety of healthy Foods
+function currentFoodList() {
+    // Select all category buttons and all food lists
+    const categoryButtons = document.querySelectorAll(".food-active-list li");
+    const allFoodLists = document.querySelectorAll(".allList");
+
+    // Remove 'active' class from all category buttons
+    categoryButtons.forEach((button) => {
+        button.classList.remove("active");
+    });
+
+    // Add 'active' class to the clicked button
+    // Display the corresponding food list and hide others
+    categoryButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            // Add 'active' class to the clicked button
+            button.classList.add("active");
+
+            // Hide all food lists
+            allFoodLists.forEach((list) => {
+                list.style.display = "none";
+            });
+
+            // Show the corresponding food list based on index
+            allFoodLists[index].style.display = "grid";
+        });
+    });
+}
+
+
+function updateQuantity(button, change){
+    const allButton = button.closest(".all-listOf-food");
+    const quantityEle = allButton.querySelector(".product-quantity");
+    const price = parseFloat(allButton.getAttribute("data-price")) || 0;
+    const totalPriceEle = allButton.querySelector(".total-price");
+
+    console.log("Quantity before:", quantityEle.textContent);
+    console.log("Price:", price);
+
+    let currentQuantity = parseInt(quantityEle.textContent);
+    currentQuantity = Math.max(0, Math.min(30, currentQuantity + change));
+    quantityEle.textContent = currentQuantity;
+
+
+    const totalPrice = currentQuantity * price;
+    totalPriceEle.textContent = totalPrice.toFixed(2);
+}
+
+// Variety of healthy Foods
+
