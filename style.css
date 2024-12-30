@@ -699,7 +699,7 @@ header .cart{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px;
 }
 
 .drinks__title .arrows button{
@@ -858,7 +858,6 @@ header .cart{
 /* Variety of healthy Foods */
 
 #healthyFood{
-    height: 100vh;
     padding: 20px;
 }
 
@@ -967,7 +966,113 @@ header .cart{
 /* Variety of healthy Foods */
 
 
+/* Purchase discount email */
 
+#purchaseDiscount{
+    padding: 40px;
+    /* height: 80vh; */
+}
+
+#purchaseDiscount .purchase-email{
+    background: var(--first-box-P);
+    height: 100%;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+#purchaseDiscount img{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    filter: opacity(40%);
+}
+
+.purchase-email .user-purchase-detail{
+    /* border: solid; */
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.user-purchase-detail .discount-title{
+    width: 50%;
+}
+
+.user-purchase-detail .discount-title h1{
+    max-width: 90%;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.user-purchase-detail .discount-title h1 span{
+    color: var(--text-color-GY);
+}
+
+.user-purchase-detail .discount-title p{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.user-purchase-detail .user-detail{
+    width: 50%;
+}
+
+.user-purchase-detail .user-detail form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.user-detail form input{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.user-detail form input:focus{
+    outline: 5px solid rgba(13, 109, 253, 0.35);
+}
+
+.user-detail form .userName{
+    width: 100%;
+}
+
+.user-detail form .userEmail{
+    width: 100%;
+}
+
+.user-detail form .userSubmit{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    color: var(--text-color-W);
+    font-weight: 600;
+    background: var(--bg-color-B);
+    border-radius: 10px;
+    position: relative;
+}
+
+.user-detail form .userSubmit:hover::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffff33;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;    
+    cursor: var(--cursor);
+}
+/* Purchase discount email */
 
 
 
@@ -1269,6 +1374,21 @@ header .cart{
 
     /* Variety of healthy food */
 
+    .user-purchase-detail .discount-title{
+        width: 100%;
+    }
+
+    .purchase-email .user-purchase-detail{
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .user-purchase-detail .user-detail{
+        width: 100%;
+    }
+
+    /* Purchase discount email */
+
 }
 
 @media (max-width: 768px) {
@@ -1517,6 +1637,7 @@ header .cart{
     }
 
     /* Variety of healthy foods */
+
 }
 
 @media (max-width: 408px){
