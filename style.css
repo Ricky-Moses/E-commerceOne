@@ -23,6 +23,10 @@
     --font-family: "Garamond";
 }
 
+select{
+    cursor: pointer;
+}
+
 /* Head */
 
 #head header{
@@ -983,7 +987,7 @@ header .cart{
 }
 
 #purchaseDiscount img{
-    width: 50%;
+    width: 30%;
     height: 100%;
     position: absolute;
     left: 0%;
@@ -1074,6 +1078,79 @@ header .cart{
 }
 /* Purchase discount email */
 
+/* List of all Product */
+
+#allProductList{
+    padding: 40px;
+}
+
+#allProductList .product-list{
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-list a{
+    padding: 0px 30px;
+    border-radius: 20px;
+    color: var(--text-color-B);
+    background: #FCF7EB;
+}
+
+.product-list a:hover{
+    background: var(--text-color-GY);
+    color: var(--text-color-W);
+}
+
+/* List of all Product */
+
+
+/* Footer */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:10px 20px;
+    background: #8080803b;
+}
+
+footer .footer-right{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-right p:nth-child(1){
+    font-size: 1.5em;
+}
+
+footer .social-link{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .social-link a{
+    font-size: 1.2em;
+    color: var(--text-color-B);
+}
+
+footer .social-link a:hover:nth-child(1){
+    color: #0d6efd;
+}
+footer .social-link a:hover:nth-child(2){
+    color: #0d6efd;
+}
+footer .social-link a:hover:nth-child(3){
+    color: #ee2a7b;
+}
+footer .social-link a:hover:nth-child(4){
+    color: #0d6efd;
+}
+/* Footer */
 
 
 
@@ -1374,13 +1451,17 @@ header .cart{
 
     /* Variety of healthy food */
 
-    .user-purchase-detail .discount-title{
+    #purchaseDiscount img{
         width: 100%;
     }
 
     .purchase-email .user-purchase-detail{
         flex-direction: column;
         align-items: normal;
+    }
+
+    .user-purchase-detail .discount-title{
+        width: 100%;
     }
 
     .user-purchase-detail .user-detail{
@@ -1718,9 +1799,21 @@ header .cart{
 
     /* Category Drinks */
 
-    /* Offer1 */
-    
-    /* Offer1 */
+    /* List of all Products */
+
+    #allProductList{
+        display: none;
+    }
+
+    /* List of all Products */
+
+    /* Footer */
+
+    footer{
+        flex-direction: column;
+    }
+
+    /* Footer */
 }
 
 /* Responsive */
