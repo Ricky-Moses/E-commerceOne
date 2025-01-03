@@ -23,10 +23,6 @@
     --font-family: "Garamond";
 }
 
-:active{
-    background: none;
-    color: none;
-}
 
 select{
     cursor: pointer;
@@ -989,7 +985,6 @@ header .cart{
     position: relative;
     overflow: hidden;
     padding: 20px;
-    z-index: -2;
 }
 
 #purchaseDiscount img{
@@ -998,7 +993,7 @@ header .cart{
     position: absolute;
     left: 0%;
     filter: opacity(40%);
-    z-index: -1;
+    z-index: 1;
 }
 
 .purchase-email .user-purchase-detail{
@@ -1386,6 +1381,7 @@ footer .social-link a:hover:nth-child(4){
 
     #purchaseDiscount img{
         width: 100%;
+        z-index: -1;
     }
 
     .purchase-email .user-purchase-detail{
